@@ -197,3 +197,42 @@ ul {
     transform: translateY(0);
   }
 }
+
+@media (max-width: 768px) {
+  
+  /* Ubah layout utama menjadi vertikal */
+  .dashboard-main {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  /* Sesuaikan padding header untuk layar kecil */
+  .dashboard-header {
+    padding: 1rem 1rem;
+  }
+  
+  /* Perkecil sedikit judul utama */
+  .dashboard-header h1 {
+    font-size: 1.25rem;
+  }
+  
+  /* Pastikan kedua kontainer memenuhi lebar layar */
+  .user-list-container,
+  .user-profile-container {
+    width: 100%;
+  }
+
+  /* Ubah ukuran font di dalam kartu agar tidak terlalu besar */
+  .card-body h3 {
+    font-size: 1.5rem;
+  }
+
+  .weather-info .temperature {
+    font-size: 2rem;
+  }
+
+  .weather-info .temperature span {
+    font-size: 1.2rem;
+  }
+}
