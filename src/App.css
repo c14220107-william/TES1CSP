@@ -90,6 +90,8 @@ ul {
   transition: background-color 0.2s, color 0.2s;
   border-bottom: 1px solid #eee;
   font-weight: 500;
+    color: #333; 
+
 }
 
 .user-list-item:hover {
