@@ -1,0 +1,199 @@
+/* GENERAL STYLING */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  color: #333;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e9ecef;
+  margin: 1.5rem 0;
+}
+
+/* DASHBOARD LAYOUT */
+.dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.dashboard-header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: #333;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: #6c757d;
+}
+
+.dashboard-main {
+  display: flex;
+  flex-grow: 1;
+  gap: 24px;
+  padding: 24px;
+}
+
+.user-list-container {
+  flex: 1;
+}
+
+.user-profile-container {
+  flex: 3;
+}
+
+/* PANELS & CARDS */
+.user-list-panel, .user-profile-panel {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.user-list-panel {
+  padding: 20px;
+}
+
+.user-profile-panel.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: #6c757d;
+  text-align: center;
+  padding: 20px;
+}
+
+/* USER LIST STYLING */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list-item {
+  padding: 12px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+.user-list-item:hover {
+  background-color: #f0f2f5;
+}
+
+.user-list-item.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+/* USER PROFILE CARD STYLING */
+.user-profile-panel.card {
+  padding: 0;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f8f9fa;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body h3 {
+  margin-top: 0;
+  font-size: 1.75rem;
+  color: #212529;
+}
+
+.card-body .username {
+  color: #6c757d;
+  font-style: italic;
+  margin-top: -10px;
+  margin-bottom: 1.5rem;
+}
+
+.user-info p, .weather-info p, .posts-info p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #495057;
+  margin: 0.5rem 0;
+}
+
+.weather-info .temperature {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+.weather-info .temperature span {
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-left: 5px;
+}
+
+.post-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #343a40;
+}
+
+.post-list li:last-child {
+  border-bottom: none;
+}
+
+/* UTILITY & FEEDBACK STYLES */
+.error-message {
+  color: #d9534f;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
